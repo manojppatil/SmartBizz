@@ -66,7 +66,7 @@
             android:layout_height="match_parent">
         </androidx.viewpager.widget.ViewPager>
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvRegisterSMSService"
             style="@style/StyleHomeScreenHeader"
             android:layout_width="match_parent"
@@ -77,7 +77,7 @@
             android:gravity="center"
             android:textColor="@color/colorPrimary"/>
 
-<!--        <com.smartbizz.newUI.view.EduvanzTextView-->
+<!--        <com.smartbizz.newUI.view.SmartBizzTextView-->
 <!--            style="@style/StyleHomeScreenHeader"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
@@ -87,7 +87,7 @@
 <!--            android:gravity="center"-->
 <!--            android:text="OR" />-->
 
-<!--        <com.smartbizz.newUI.view.EduvanzTextView-->
+<!--        <com.smartbizz.newUI.view.SmartBizzTextView-->
 <!--            android:id="@+id/tvNumber"-->
 <!--            style="@style/StyleHomeScreenHeader"-->
 <!--            android:layout_width="match_parent"-->

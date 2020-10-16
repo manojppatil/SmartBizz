@@ -14,11 +14,11 @@
             android:icon="@drawable/icon_eligibility"
             android:title="Promotion" />
 
-        <item
-            android:id="@+id/nav_designer"
-            android:icon="@drawable/ic_pen_nib"
-            android:iconTint="#454a62"
-            android:title="Designer"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_designer"-->
+<!--            android:icon="@drawable/ic_pen_nib"-->
+<!--            android:iconTint="#454a62"-->
+<!--            android:title="Designer"/>-->
 
         <item
             android:id="@+id/nav_whatsappGrp"
@@ -26,17 +26,17 @@
             android:iconTint="#454a62"
             android:title="Whatsapp Group"/>
 
-        <item
-            android:id="@+id/nav_balanceData"
-            android:icon="@drawable/ic_tachometer"
-            android:iconTint="#454a62"
-            android:title="Balance SMS"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_balanceData"-->
+<!--            android:icon="@drawable/ic_tachometer"-->
+<!--            android:iconTint="#454a62"-->
+<!--            android:title="Balance SMS"/>-->
 
-        <item
-            android:id="@+id/nav_smsReport"
-            android:icon="@drawable/ic_tachometer"
-            android:iconTint="#454a62"
-            android:title="SMS Report"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_smsReport"-->
+<!--            android:icon="@drawable/ic_tachometer"-->
+<!--            android:iconTint="#454a62"-->
+<!--            android:title="SMS Report"/>-->
 
         <item
             android:id="@+id/nav_logout"

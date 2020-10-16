@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="com.smartbizz.newUI.fragments.PostCardFragment">
+    tools:context="com.smartbizz.newUI.fragments.SMSSenderFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -29,7 +29,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-        <com.smartbizz.newUI.view.EduvanzEditText
+                <TextView
+                    android:id="@+id/txtCharCount"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"/>
+
+        <com.smartbizz.newUI.view.SmartBizzEditText
             android:id="@+id/etMesage"
             style="@style/StyleCommonTextFieldLarge"
             android:layout_width="match_parent"
@@ -39,7 +45,7 @@
             android:inputType="textMultiLine"
             android:hint="Write you SMS content here."/>
 
-                <RelativeLayout
+        <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -54,7 +60,7 @@
                         android:layout_centerVertical="true"
                         android:orientation="vertical">
 
-                        <com.smartbizz.newUI.view.EduvanzTextView
+                        <com.smartbizz.newUI.view.SmartBizzTextView
                             android:id="@+id/tvContactGrp"
                             style="@style/StyleCommonLabel"
                             android:layout_width="wrap_content"
@@ -65,11 +71,12 @@
                         <androidx.appcompat.widget.AppCompatSpinner
                             android:id="@+id/spinnerContactGrp"
                             style="@style/StyleSpinner"
+
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
 
-                    <com.smartbizz.newUI.view.EduvanzTextView
+                    <com.smartbizz.newUI.view.SmartBizzTextView
                         android:id="@+id/txtOr"
                         style="@style/StyleCommonLabel"
                         android:layout_width="wrap_content"
@@ -96,7 +103,7 @@
                             android:layout_gravity="center_horizontal"
                             app:srcCompat="@drawable/ic_address_book" />
 
-                        <com.smartbizz.newUI.view.EduvanzTextView
+                        <com.smartbizz.newUI.view.SmartBizzTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -110,7 +117,6 @@
 
                 </RelativeLayout>
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,37 +125,22 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txtContacts"
+            <com.smartbizz.newUI.view.SmartBizzEditText
+                android:id="@+id/etContacts"
+                style="@style/StyleCommonTextFieldLarge"
                 android:layout_width="match_parent"
-                android:layout_marginRight="20dp"
-                android:layout_height="100dp"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:maxLines="10"
+                android:digits="0123456789+, "
+                android:inputType="textMultiLine"
+                android:hint="Your Selected Contacts"/>
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/linContack"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical"-->
-<!--                android:layout_alignParentRight="true"-->
-<!--                android:layout_centerVertical="true">-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/btnContactPicker"-->
-<!--                    android:layout_width="40dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    android:layout_gravity="center_horizontal"-->
-<!--                    app:srcCompat="@drawable/ic_address_book" />-->
-
-<!--                <com.smartbizz.newUI.view.EduvanzTextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center_horizontal"-->
-<!--                    android:fontFamily="@font/sourcesanspro_semibold"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:layout_marginTop="3dp"-->
-<!--                    android:textColor="@color/colorTheme"-->
-<!--                    android:text="Add Contacts"/>-->
-<!--            </LinearLayout>-->
+<!--            <TextView-->
+<!--                android:id="@+id/txtContacts"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_height="100dp"/>-->
 
         </RelativeLayout>
 
@@ -158,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp">
 
-            <com.smartbizz.newUI.view.EduvanzButton
+            <com.smartbizz.newUI.view.SmartBizzButton
                 android:id="@+id/btnReset"
                 style="@style/commonButtonAccentBG2"
                 android:layout_width="0dp"
@@ -168,7 +159,7 @@
                 android:layout_marginRight="10dp"
                 android:text="Reset" />
 
-            <com.smartbizz.newUI.view.EduvanzButton
+            <com.smartbizz.newUI.view.SmartBizzButton
                 android:id="@+id/btnSubmit"
                 style="@style/commonButtonAccentBG1"
                 android:layout_width="0dp"
@@ -180,7 +171,7 @@
 
         </LinearLayout>
 
-            </LinearLayout>
+    </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -222,7 +213,7 @@
                     android:layout_marginBottom="20dp"
                     android:orientation="vertical">
 
-                    <com.smartbizz.newUI.view.EduvanzTextView
+                    <com.smartbizz.newUI.view.SmartBizzTextView
                         android:id="@+id/txtTitle"
                         style="@style/styleBottomSheetTitle"
                         android:layout_width="match_parent"
@@ -236,7 +227,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <com.smartbizz.newUI.view.EduvanzEditText
+                        <com.smartbizz.newUI.view.SmartBizzEditText
                             android:id="@+id/etContactGrpTitle"
                             style="@style/StyleCommonTextField"
                             android:layout_width="match_parent"
@@ -245,14 +236,28 @@
                             android:layout_marginRight="20dp"
                             android:hint="Group Title"/>
 
-                        <TextView
-                            android:id="@+id/txtContactGrp"
+                        <com.smartbizz.newUI.view.SmartBizzEditText
+                            android:id="@+id/etContactGrp"
+                            style="@style/StyleCommonTextFieldLarge"
                             android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
                             android:layout_toLeftOf="@+id/linContactGrp"
                             android:layout_below="@+id/etContactGrpTitle"
                             android:layout_marginRight="20dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="10"
+                            android:digits="0123456789+, "
+                            android:inputType="textMultiLine"
+                            android:hint="Your Selected Contacts"/>
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txtContactGrp"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_toLeftOf="@+id/linContactGrp"-->
+<!--                            android:layout_below="@+id/etContactGrpTitle"-->
+<!--                            android:layout_marginRight="20dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:layout_height="wrap_content"/>-->
 
                         <LinearLayout
                             android:id="@+id/linContactGrp"
@@ -269,7 +274,7 @@
                                 android:layout_gravity="center_horizontal"
                                 app:srcCompat="@drawable/ic_address_book" />
 
-                            <com.smartbizz.newUI.view.EduvanzTextView
+                            <com.smartbizz.newUI.view.SmartBizzTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -282,7 +287,7 @@
 
                     </RelativeLayout>
 
-                        <com.smartbizz.newUI.view.EduvanzButton
+                        <com.smartbizz.newUI.view.SmartBizzButton
                             android:id="@+id/btnCreateGrp"
                             style="@style/commonButtonAccentBG1"
                             android:layout_width="match_parent"

@@ -34,7 +34,7 @@
         android:background="@drawable/accent_border_selector_bottom_radius"
         android:orientation="horizontal">
 
-        <com.smartbizz.newUI.view.EduvanzButton
+        <com.smartbizz.newUI.view.SmartBizzButton
             android:id="@+id/btnEdit"
             style="@style/StyleBaseButton"
             android:layout_width="0dp"
@@ -46,7 +46,7 @@
             android:visibility="visible"
             android:textColor="@color/colorAccent" />
 
-        <com.smartbizz.newUI.view.EduvanzButton
+        <com.smartbizz.newUI.view.SmartBizzButton
             android:id="@+id/btnContinue"
             style="@style/commonButtonAccentBG"
             android:layout_width="0dp"

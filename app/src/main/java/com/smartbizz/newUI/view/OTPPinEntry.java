@@ -32,7 +32,7 @@ import com.smartbizz.R;
 
 import java.util.Locale;
 
-public class OTPPinEntry extends EduvanzEditText {
+public class OTPPinEntry extends SmartBizzEditText {
     private static final String XML_NAMESPACE_ANDROID = "http://schemas.android.com/apk/res/android";
 
     protected String mMask = null;

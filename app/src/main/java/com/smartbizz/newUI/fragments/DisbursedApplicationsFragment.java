@@ -1,6 +1,5 @@
 package com.smartbizz.newUI.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,19 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.smartbizz.R;
 import com.smartbizz.Util.Constants;
 import com.smartbizz.Util.DialogUtil;
-import com.smartbizz.newUI.adapter.DisbursedLoansAdapter;
 import com.smartbizz.newUI.interfaces.OnApplicationEditListener;
-import com.smartbizz.newUI.network.ApiConstants;
 import com.smartbizz.newUI.network.NetworkManager;
-import com.smartbizz.newUI.newViews.DashboardActivity;
 import com.smartbizz.newUI.newViews.DesignActivity;
-import com.smartbizz.newUI.newViews.GetEmailActivity;
 import com.smartbizz.newUI.pojo.Category;
 import com.smartbizz.newUI.pojo.MCategory;
 
@@ -34,9 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.smartbizz.newUI.adapter.SpinnerAdapter;
-import com.smartbizz.newUI.pojo.Requests;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**

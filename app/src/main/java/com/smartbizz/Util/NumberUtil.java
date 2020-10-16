@@ -25,7 +25,7 @@ public class NumberUtil {
                 try {
                     return Integer.parseInt(number.toString().replace(",",""));
                 } catch (Exception e) {
-//                    EduvanzLogger.error(TAG, e);
+//                    MyLogger.error(TAG, e);
                 }
             }
         }
@@ -58,7 +58,7 @@ public class NumberUtil {
                 try {
                     return Long.parseLong(number.toString().replaceAll("\\W", ""));
                 } catch (Exception e) {
-//                    EduvanzLogger.error(TAG, e);
+//                    MyLogger.error(TAG, e);
                 }
             }
         }
@@ -101,7 +101,7 @@ public class NumberUtil {
                 try {
                     return Double.parseDouble(number.toString());
                 } catch (NumberFormatException e) {
-//                    EduvanzLogger.error(TAG, e);
+//                    MyLogger.error(TAG, e);
                 }
             }
         }

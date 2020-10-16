@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE resources [<!ENTITY google_play_services_link "Google Play Store">]>
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY google_play_services_link "Google Play Store">]>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Smart Bizz</string>
 
     <!--login screen start-->
-    <string name="login_to_eduvanz">Login to SmartPost</string>
+    <string name="login_to">Login to SmartPost</string>
     <string name="get_started_now">Get started now!</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="email_id">Email Id</string>
@@ -33,7 +32,7 @@
     <string name="title_share_app">Share the App</string>
     <string name="title_rate_app">Rate Our App</string>
     <string name="special_offers">Special Offers</string>
-    <string name="tel_0224523689">tel:02212345678</string>
+    <string name="tel">tel:+917030333019</string>
 
     <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
     <string name="settings">Settings</string>
@@ -59,16 +58,8 @@
     <!--
    <string name="profile_photo">Profile Photo <font fgcolor="#EE415E">*</font></string>
    -->
-    <string name="lets">Let\'s</string>
-    <string name="start_with_ur">Start with your</string>
-    <string name="to_verify">To verify</string>
-    <string name="enter_received_otp">Enter Received OTP</string>
-    <string name="now_enter">Now Enter</string>
-    <string name="your_regtd_emalid">Your Registered Email ID</string>
 
     <!-- Vertical Stepper View Sample Item -->
-
-    <string name="first_name">First Name</string>
 
 
     <string name="error_message_unable_to_connect">Unable to connect to server. Check your network connection or try after some time.</string>
@@ -82,7 +73,6 @@
     <string name="app_intent_name">PhotoEditor</string>
     <string name="msg_save_image_to_share">Please save image to share</string>
     <string name="msg_share_image">Share Image</string>>
-
 
 
     <string name="step_basic">A) Basic</string>
@@ -99,5 +89,7 @@
     <string name="this_field_is_required">Required field*</string>
     <string name="error_enter_valid_mobile_number">Please enter a valid mobile number</string>
     <string name="error_enter_valid_email_address">Please enter a valid email address</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

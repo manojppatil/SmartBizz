@@ -10,7 +10,7 @@
 
     <include layout="@layout/view_bottom_sheet_top_indicator" />
 <!--//We will be launching soon this feature-->
-    <com.smartbizz.newUI.view.EduvanzTextView
+    <com.smartbizz.newUI.view.SmartBizzTextView
         android:id="@+id/txtTitle"
         style="@style/styleBottomSheetTitle"
         android:layout_width="match_parent"

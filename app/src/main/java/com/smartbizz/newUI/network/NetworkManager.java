@@ -109,7 +109,7 @@ public class NetworkManager {
         sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_VERIFY_OTP, params, responseListener);
     }
 
-    public void likeShareCount(Context context, String like, String share,String CategoryId,String imgId, final Response.Listener<NetworkResponse> responseListener) {
+    public void likeShareCount(Context context, String like, String share, String CategoryId, String imgId, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, Object> params = new HashMap<>();
         params.put("like", like);
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
@@ -156,24 +156,24 @@ public class NetworkManager {
         sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_GET_CATEGORY, params, responseListener);
     }
 
-    public void putUserAction(Context context,String request_id,String isAccepted, final Response.Listener<NetworkResponse> responseListener) {
+    public void putUserAction(Context context, String request_id, String isAccepted, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, Object> params = new HashMap<>();
-        String url = ApiConstants.Url.URL_PUT_USERACTION +"/"+request_id +"/" +isAccepted;
+        String url = ApiConstants.Url.URL_PUT_USERACTION + "/" + request_id + "/" + isAccepted;
         sendJsonRequest(context, Request.Method.GET, url, new JSONObject(params), responseListener);
     }
 
-    public void putUploadBankStmt(Context context, String BrandName,String firstName,String email,String address,String companyType, String filePath, final Response.Listener<NetworkResponse> responseListener) {
+    public void putUploadBankStmt(Context context, String BrandName, String firstName, String email, String address, String companyType, String filePath, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, String> params = new HashMap<>();
         params.put(ApiConstants.Keys.LOGGED_ID, PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
-        params.put("id",PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
-        params.put("brand_name",BrandName);
-        params.put("first_name",firstName);
-        params.put("email",email);
-        params.put("address",address);
-        params.put("company_type",companyType);
-        params.put("mobile",PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
+        params.put("id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
+        params.put("brand_name", BrandName);
+        params.put("first_name", firstName);
+        params.put("email", email);
+        params.put("address", address);
+        params.put("company_type", companyType);
+        params.put("mobile", PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
         DataPart dataPart = new DataPart(filePath);
-        sendMultipartRequest(context, Request.Method.POST, ApiConstants.Url.URL_EDIT_PROFILE,params, dataPart, responseListener);
+        sendMultipartRequest(context, Request.Method.POST, ApiConstants.Url.URL_EDIT_PROFILE, params, dataPart, responseListener);
     }
 
     public void getSenderId(Context context, final Response.Listener<NetworkResponse> responseListener) {
@@ -182,25 +182,25 @@ public class NetworkManager {
         sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_GET_SENDER_ID, params, responseListener);
     }
 
-    public void putSMSContactGrp(Context context,String Message, String groupid, final Response.Listener<NetworkResponse> responseListener) {
+    public void putSMSContactGrp(Context context, String Message, String groupid, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, String> params = new HashMap<>();
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
         params.put("message", Message);
-        params.put("mobile",PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
+        params.put("mobile", PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
         params.put("group_id", groupid);
         sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_PUT_SMS_UPLOAD, params, responseListener);
     }
 
-    public void putSMSContactList(Context context,String Message, String ContactList, final Response.Listener<NetworkResponse> responseListener) {
+    public void putSMSContactList(Context context, String Message, String ContactList, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, String> params = new HashMap<>();
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
         params.put("message", Message);
-        params.put("mobile",PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
+        params.put("mobile", PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
         params.put("contact_list", ContactList);
         sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_PUT_SMS_UPLOAD, params, responseListener);
     }
 
-    public void createContactGrp(Context context,String GrpName, String ContactList, final Response.Listener<NetworkResponse> responseListener) {
+    public void createContactGrp(Context context, String GrpName, String ContactList, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, String> params = new HashMap<>();
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
         params.put("group_name", GrpName);
@@ -214,7 +214,7 @@ public class NetworkManager {
         sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_GET_CONTACT_GRP, params, responseListener);
     }
 
-    public void putSenderId(Context context,String applicationno, final Response.Listener<NetworkResponse> responseListener) {
+    public void putSenderId(Context context, String applicationno, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, String> params = new HashMap<>();
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
         params.put("application_no", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
@@ -222,39 +222,39 @@ public class NetworkManager {
         sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_PUT_SENDER_ID, params, responseListener);
     }
 
-    public void putSMSBulkUpload(Context context,String Message, String filePath, final Response.Listener<NetworkResponse> responseListener) {
+    public void putSMSBulkUpload(Context context, String Message, String filePath, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, String> params = new HashMap<>();
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
         params.put("message", Message);
-        params.put("mobile",PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
+        params.put("mobile", PreferenceManager.getString(context, Constants.PrefKeys.MOBILE));
         DataPart dataPart = new DataPart(filePath);
-        sendMultipartRequest(context, Request.Method.POST, ApiConstants.Url.URL_PUT_SMS_UPLOAD,params, dataPart, responseListener);
+        sendMultipartRequest(context, Request.Method.POST, ApiConstants.Url.URL_PUT_SMS_UPLOAD, params, dataPart, responseListener);
     }
 
     public void getMessageId(Context context, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, Object> params = new HashMap<>();
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
-        sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_GET_MESSAGE_ID , params, responseListener);
+        sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_GET_MESSAGE_ID, params, responseListener);
     }
 
     public void getSMSServiceRequest(Context context, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, Object> params = new HashMap<>();
         params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
         params.put("request_approve_status", "1");
-        sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_GET_REQUEST_ID , params, responseListener);
+        sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_GET_REQUEST_ID, params, responseListener);
     }
 
     public void getBalanceSMS(Context context, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, Object> params = new HashMap<>();
 //        sendJsonRequest(context, Request.Method.GET, "http://sms.digimitra.in/V2/http-balance-api.php?apikey=PfN9QTxgRGwua1FP&format=json", new JSONObject(params), responseListener);
-        sendJsonRequest(context, Request.Method.GET, ApiConstants.Url.URL_GET_SMS_BALANCE + "?apikey="+ PreferenceManager.getString(context, Constants.PrefKeys.API_KEY) +"&format=json", new JSONObject(params), responseListener);
+        sendJsonRequest(context, Request.Method.GET, ApiConstants.Url.URL_GET_SMS_BALANCE + "?apikey=" + PreferenceManager.getString(context, Constants.PrefKeys.API_KEY) + "&format=json", new JSONObject(params), responseListener);
     }
 
     public void getReport(Context context, final Response.Listener<NetworkResponse> responseListener) {
         Map<String, Object> params = new HashMap<>();
         //http://sms.digimitra.in/V2/http-dlr.php?apikey=PfN9QTxgRGwua1FP&msgid=64183530297343&format=json
 //        sendJsonRequest(context, Request.Method.POST, "http://sms.digimitra.in/V2/http-dlr.php?apikey=PfN9QTxgRGwua1FP&msgid=64183530297343&format=json", new JSONObject(params), responseListener);
-        sendJsonRequest(context, Request.Method.GET, ApiConstants.Url.URL_GET_SMS_REPORT +  PreferenceManager.getString(context, Constants.PrefKeys.API_KEY) +"&msgid="+ "64183530297343" +"&format=json", new JSONObject(params), responseListener);
+        sendJsonRequest(context, Request.Method.GET, ApiConstants.Url.URL_GET_SMS_REPORT + PreferenceManager.getString(context, Constants.PrefKeys.API_KEY) + "&msgid=" + "64183530297343" + "&format=json", new JSONObject(params), responseListener);
     }
 
     private void sendJsonRequest(@NonNull final Context context, int method, String url, final JSONObject params, final Response
@@ -277,14 +277,35 @@ public class NetworkManager {
         mRequestQueue.add(request);
     }
 
-    private void sendMultipartRequest(@NonNull final Context context, int method, String url, Map<String,String> params, DataPart dataPart, final Response
+    private void sendMultipartRequest(@NonNull final Context context, int method, String url, Map<String, String> params, DataPart dataPart, final Response
             .Listener<NetworkResponse> responseListener) {
-        final NetworkMultipartRequest request = new NetworkMultipartRequest(context, method, url,params, dataPart, responseListener);
+        final NetworkMultipartRequest request = new NetworkMultipartRequest(context, method, url, params, dataPart, responseListener);
         request.setTag(url);
         request.setRetryPolicy(new DefaultRetryPolicy(
                 60000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         mRequestQueue.add(request);
+    }
+
+    public void getTemplatesCatgList(Context context, String categoryTypeId, final Response.Listener<NetworkResponse> responseListener) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
+        params.put("id", categoryTypeId);
+        sendJsonRequest(context, Request.Method.GET, ApiConstants.Url.URL_GET_TEMPLATE_CATEGORY, new JSONObject(params), responseListener);
+    }
+
+    public void add_catalog(Context context, String ItemName, String ItemPrice, String ItemDesc, String ItemLink, String ItemCode, String filePath, final Response.Listener<NetworkResponse> responseListener) {
+        Map<String, String> params = new HashMap<>();
+        params.put("user_id", PreferenceManager.getString(context, Constants.PrefKeys.LOGGED_ID));
+        params.put("item_name", ItemName);
+        params.put("price", ItemPrice);
+        params.put("description", ItemDesc);
+        params.put("link", ItemLink);
+        params.put("item_code", ItemCode);
+        params.put("image", filePath);
+//        DataPart dataPart = new DataPart(filePath);
+//        sendMultipartRequest(context, Request.Method.POST, ApiConstants.Url.URL_ADD_CATALOG,params, dataPart, responseListener);
+        sendFormRequest(context, Request.Method.POST, ApiConstants.Url.URL_ADD_CATALOG, params, responseListener);
     }
 }

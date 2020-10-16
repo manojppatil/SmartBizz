@@ -32,6 +32,8 @@ public class ApiConstants {
         String URL_GET_SMS_REPORT = "http://sms.digimitra.in/V2/http-dlr.php?apikey=";
         String URL_PUT_SENDER_ID = BASE_URL +  "/pure/put_sender_id";
         String URL_GET_REQUEST_ID = BASE_URL +  "/pure/sms_service_request";
+        String URL_GET_TEMPLATE_CATEGORY = BASE_URL +  "/pure/get_sms_category";
+        String URL_ADD_CATALOG = BASE_URL +  "/pure/add_catlog";
 
     }
 

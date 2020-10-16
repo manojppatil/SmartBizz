@@ -1,12 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-//    apply from: 'dependencies.gradle'
     repositories {
         google()
         jcenter()
-//        jcenter { url "https://jcenter.bintray.com" }
-//        maven { url 'https://maven.google.com' }
 
     }
     dependencies {
@@ -18,20 +15,10 @@ buildscript {
     }
 }
 
-//ext{
-//    butterknifeVersion = "8.8.1"
-//    bouncyCastleVersion = "1.45"
-//    retrofitVersion = "2.3.0"
-//    okhttpVersion = "3.11.0"
-//    gsonVersion = "2.8.2"
-//}
 allprojects {
     repositories {
         google()
         jcenter()
-//        jcenter { url "https://jcenter.bintray.com" }
-//        maven { url "https://s3.amazonaws.com/repo.commonsware.com" }
-//        maven { url "https://jitpack.io" }
 
     }
 }

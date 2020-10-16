@@ -43,35 +43,16 @@ public class Constants {
         String WHATSAPPLINK = "Whatsapplink";
         String PASSWORD = "password";
         String LOGGED_ID = "logged_id";
-        String LOGGED_IN = "userlogin";
         String NAME = "name";
         String LOGO = "logo";
         String FIRST_NAME = "first_name";
-        String LAST_LOGIN = "last_login";
-        String APPLICANT_ID = "applicantId";
-        String LEAD_ID = "leadId";
-        String SKIP_UPDATE = "skipUpdate";
-        String SANCTIONED_AMOUNT = "sanctionedAmount";
-        String COURSE_FEE = "courseFee";
-        String UPLOADS_TUTORIAL = "uploadsTutorial";
-        String HIDE_PERSONAL_DETAILS = "hidePersonalDetails";
-        String PROFESSION = "profession";
-        String HOME_SCREEN_LAUNCHED = "homeScreenLaunched";
+
     }
 
     public interface AppStage {
         String INTRO_COMPLETED = "intro_completed";
         String PERMISSIONS_COMPLETED = "permissions_completed";
         String MOBILE_VERIFIED = "mobile_verified";
-        String BASIC_DETAILS_COMPLETED = "basic_details_completed";
-        String PERSONAL_DETAILS_COMPLETED = "personal_details_completed";
-        String COURSE_DETAIL_COMPLETED = "course_detail_completed";
-        String HALF_OFFER_APPROVED_PENDING = "half_offer_approved_pending";
-        String HALF_OFFER_UN_APPROVED_PENDING = "half_offer_un_approved_pending";
-
-        String BANKING_BANK_COMPLETED = "banking_bank_completed";
-        String BANKING_AGREEMENT_COMPLETED = "banking_agreement_completed";
-        String BANKING_DETAILS_COMPLETED = "banking_details_completed";
     }
 
 }

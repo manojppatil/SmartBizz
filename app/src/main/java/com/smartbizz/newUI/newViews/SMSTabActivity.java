@@ -42,7 +42,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.smartbizz.Util.DialogUtil.dismissProgressDialog;
-import static com.smartbizz.newUI.newViews.EditImageActivity.FILE_PROVIDER_AUTHORITY;
 
 public class SMSTabActivity extends BaseActivity {
 
@@ -90,8 +89,9 @@ public class SMSTabActivity extends BaseActivity {
     private void setupViewPager() {
 
         tab.addTab(tab.newTab().setText("SMS Sender"));
-        tab.addTab(tab.newTab().setText("SMS Bulk Push"));
+        tab.addTab(tab.newTab().setText("Create Group"));
         tab.addTab(tab.newTab().setText("Sender Id"));
+        tab.addTab(tab.newTab().setText("SMS Report"));
         tab.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final SMSTabAdapter adapter = new SMSTabAdapter(this,getSupportFragmentManager(), tab.getTabCount());

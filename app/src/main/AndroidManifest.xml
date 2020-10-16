@@ -21,7 +21,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -43,14 +42,16 @@
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
         tools:node="replace"
         tools:replace="android:allowBackup,android:icon,android:label,android:theme,android:fullBackupContent,android:roundIcon,android:name">
-
-        <!--Needed for Pie Device-->
+        <activity android:name=".newUI.newViews.AddCatelogueItem"></activity>
+        <activity android:name=".newUI.newViews.CatalogueActivity" />
+        <activity android:name=".newUI.newViews.TemplateActivity" />
+        <activity android:name=".newUI.newViews.SmsTemplateActivity" /> <!-- Needed for Pie Device -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -60,11 +61,6 @@
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
-
-        <activity
-            android:name=".faqexpandablelistview.FAQ"
-            android:screenOrientation="portrait" />
-
         <activity
             android:name=".newUI.newViews.SplashScreen"
             android:screenOrientation="sensorPortrait">
@@ -74,75 +70,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".newUI.newViews.LoginActivity"
             android:screenOrientation="portrait">
 
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-
         <activity
             android:name=".newUI.newViews.VerifyOTPActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".newUI.newViews.Language"
-            android:screenOrientation="sensorPortrait">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.DEFAULT" />-->
-            <!--            </intent-filter>-->
-        </activity>
-        <activity
-            android:name=".newUI.newViews.GetMobileNo"
-            android:screenOrientation="sensorPortrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
+            android:screenOrientation="sensorPortrait" />
         <activity
             android:name=".newUI.newViews.DashboardActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".newUI.newViews.DesignActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme">
-<!--        <intent-filter>-->
-<!--            <action android:name="android.intent.action.MAIN" />-->
 
-<!--            <category android:name="android.intent.category.LAUNCHER" />-->
-<!--        </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-        <activity
-            android:name=".newUI.newViews.GetEmailActivity"
-            android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
             android:name=".newUI.newViews.ContactUs"
             android:screenOrientation="sensorPortrait" />
         <activity
             android:name=".newUI.newViews.BannerActivity"
             android:screenOrientation="sensorPortrait" />
-
         <activity
             android:name=".newUI.newViews.PostCardActivity"
             android:screenOrientation="sensorPortrait"
@@ -152,11 +118,12 @@
                 android:scheme="file"
                 tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".newUI.newViews.PostCardTabActivity"
             android:screenOrientation="sensorPortrait"
@@ -166,29 +133,32 @@
                 android:scheme="file"
                 tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".newUI.newViews.ContactsPickerActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".newUI.newViews.SMSTabActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".newUI.newViews.SMSBalanceActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".newUI.newViews.SMSReportActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".newUI.newViews.CatalogActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".newUI.newViews.MyProjectActivity"
             android:screenOrientation="sensorPortrait"
@@ -198,11 +168,12 @@
                 android:scheme="file"
                 tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".newUI.newViews.BrandDesigningActivity"
             android:screenOrientation="sensorPortrait"
@@ -212,33 +183,32 @@
                 android:scheme="file"
                 tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.smartbizz.newUI.newViews.EditImageActivity"
+            android:name=".newUI.newViews.EditImageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter
                 android:label="@string/app_intent_name"
                 android:scheme="file"
                 tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
-
         </activity>
-
         <activity
-            android:name="com.smartbizz.newUI.newViews.WebViewSMSService"
+            android:name=".newUI.newViews.WebViewSMSService"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.smartbizz.newUI.newViews.WebAdvSiteActivity"
+            android:name=".newUI.newViews.WebAdvSiteActivity"
             android:screenOrientation="portrait" />
 
         <meta-data
@@ -250,49 +220,10 @@
             android:authorities="com.smartbizz.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-
         </provider>
-
-
-        <activity android:name="com.digimitra.whatsapppost.Sender">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-            <!--                <action android:name="android.intent.action.VIEW" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
-
-        <service
-            android:name="com.digimitra.whatsapppost.WASenderAccSvc"
-            android:label="@string/app_name"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-            <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.accessibilityservice"
-                android:resource="@xml/service_config" />
-        </service>
-        <service
-            android:name="com.digimitra.whatsapppost.WASenderFgSvc"
-            android:enabled="true"
-            android:exported="false" />
-<!--        <provider-->
-<!--            android:name="androidx.core.content.FileProvider"-->
-<!--            android:authorities="com.digimitra.whatsapppost.fileprovider"-->
-<!--            android:grantUriPermissions="true"-->
-<!--            android:exported="false">-->
-<!--            <meta-data-->
-<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
-<!--                android:resource="@xml/filepaths" />-->
-<!--        </provider>-->
-
     </application>
 
 </manifest>

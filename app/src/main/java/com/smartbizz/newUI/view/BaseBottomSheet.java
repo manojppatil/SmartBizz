@@ -43,9 +43,9 @@ public class BaseBottomSheet extends BottomSheetDialogFragment {
                 }
             });
         } catch (NoSuchFieldException e) {
-//            EduvanzLogger.error(e);
+//            MyLogger.error(e);
         } catch (IllegalAccessException e) {
-//            EduvanzLogger.error(e);
+//            MyLogger.error(e);
         }
     }
 
@@ -70,9 +70,9 @@ public class BaseBottomSheet extends BottomSheetDialogFragment {
             });
             behavior.setPeekHeight(new ScreenUtils(activity).getHeight());
         } catch (NoSuchFieldException e) {
-//            EduvanzLogger.error(e);
+//            MyLogger.error(e);
         } catch (IllegalAccessException e) {
-//            EduvanzLogger.error(e);
+//            MyLogger.error(e);
         }
     }
 

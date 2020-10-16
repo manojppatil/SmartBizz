@@ -15,17 +15,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.smartbizz.MainActivity;
 import com.smartbizz.newUI.MainApplication;
 import com.smartbizz.R;
 import com.smartbizz.newUI.SharedPref;
-import com.smartbizz.newUI.VolleyCall;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static com.smartbizz.newUI.MainApplication.TAG;
 
@@ -91,45 +86,6 @@ public class BannerActivity extends AppCompatActivity {
             buttonContinue= (Button) findViewById(R.id.button_bannerdetail_continue);
             mainApplication.applyTypeface(buttonContinue, context);
 
-//            buttonCheckEligiblity.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(context, EligibilityCheck.class);
-//                    startActivity(intent);
-//                }
-//            });
-//
-//            buttonApplyNow.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(context, LoanApplication.class);
-//                    startActivity(intent);
-//                    finish();
-//                }
-//            });
-
-//            buttonContinue.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(context, LoanApplication.class);
-//                    if(borrower.equalsIgnoreCase("1") && coBorrower.equalsIgnoreCase("0")){
-//                        Bundle bundle = new Bundle();
-//                        bundle.putString("toCoBorrower", "1");
-//                        intent.putExtras(bundle);
-//                    }else if(borrower.equalsIgnoreCase("1") && coBorrower.equalsIgnoreCase("1") &&
-//                            coBorrowerDocument.equalsIgnoreCase("0") && borrowerDocument.equalsIgnoreCase("0")){
-//                        Bundle bundle = new Bundle();
-//                        bundle.putString("toDocUpload", "1");
-//                        intent.putExtras(bundle);
-//                    }else if(coBorrowerDocument.equalsIgnoreCase("1") && borrowerDocument.equalsIgnoreCase("1")){
-//                        Bundle bundle = new Bundle();
-//                        bundle.putString("toSignSubmit", "1");
-//                        intent.putExtras(bundle);
-//                    }
-//                    startActivity(intent);
-//                }
-//            });
-
             if (sharedPref.getLoginDone(context)) {
                 buttonApplyNow.setVisibility(View.VISIBLE);
                 buttonCheckEligiblity.setVisibility(View.GONE);
@@ -137,49 +93,10 @@ public class BannerActivity extends AppCompatActivity {
 
             }
 
-
-            /** API CALL**/
-            if(fromDeal.equalsIgnoreCase("1")){
-                try {
-                    String url = MainActivity.mainUrl + "mobileadverstisement/getSpecificDealDetails";
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("id", id);
-                    VolleyCall volleyCall = new VolleyCall();
-                    volleyCall.sendRequest(getApplicationContext(), url, mActivity, null, "dealDetail", params, MainActivity.auth_token);
-                } catch (Exception e) {
-
-
-                }
-            }else {
-                try {
-                    String url = MainActivity.mainUrl + "mobileadverstisement/getSpecificBannerDetails";
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("id", id);
-                    VolleyCall volleyCall = new VolleyCall();
-                    volleyCall.sendRequest(getApplicationContext(), url, mActivity, null, "bannerDetail", params, MainActivity.auth_token);
-                } catch (Exception e) {
-
-
-                }
-            }
-
-            /** API CALL POST LOGIN DASHBOARD STATUS **/
-            try {
-                String url = MainActivity.mainUrl + "dashboard/getStudentDashbBoardStatus";
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("studentId", userId);
-                VolleyCall volleyCall = new VolleyCall();
-                volleyCall.sendRequest(context, url, mActivity, null, "dashbBoardStatusBannerPage", params, MainActivity.auth_token);
-
-            } catch (Exception e) {
-
-
-            }
         } catch (Exception e) {
 
 
         }
-
 
     }
 
@@ -217,8 +134,6 @@ public class BannerActivity extends AppCompatActivity {
                 }
 
                 String image = jsonObject1.getString("image");
-                //http://159.89.204.41/eduvanzbeta/uploads/mobileadvertisement/1/image_1513427852.png
-                //http://eduvanz.com/admin/uploads/mobileadvertisement/1/image_1513427852.png
                 Picasso.with(context).load(image).placeholder(context.getResources().getDrawable(R.drawable.bannersplaceholder)).into(imageViewBanner);
 
             }else {
@@ -252,7 +167,6 @@ public class BannerActivity extends AppCompatActivity {
                 }
 
                 String image = jsonObject1.getString("image");
-//http://159.89.204.41/eduvanzbeta/uploads/mobileadvertisement/6/image_1511869962.png
                 Picasso.with(context).load(image).placeholder(context.getResources().getDrawable(R.drawable.bannersplaceholder)).into(imageViewBanner);
 
             }else {

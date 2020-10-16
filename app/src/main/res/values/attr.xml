@@ -13,19 +13,19 @@
     <attr name="primaryText" format="string" />
     <attr name="secondaryText" format="string" />
     <attr name="text" format="string" />
-    <declare-styleable name="EduvanzCustomToolBar">
+    <declare-styleable name="SmartBizzCustomToolBar">
         <attr name="primaryText" />
         <attr name="secondaryText" />
         <attr name="hideContactUs" format="boolean" />
     </declare-styleable>
 
-    <declare-styleable name="EduvanzToolBarTitleSubTitle">
+    <declare-styleable name="SmartBizzToolBarTitleSubTitle">
         <attr name="primaryText" />
         <attr name="secondaryText" />
         <attr name="layoutBackgroundColor" format="reference"/>
     </declare-styleable>
 
-    <declare-styleable name="EduvanzFormHeader">
+    <declare-styleable name="SmartBizzFormHeader">
         <attr name="title" />
         <attr name="resource" format="reference" />
         <attr name="isActive" format="boolean" />
@@ -77,9 +77,4 @@
         <attr name="imageResource" />
     </declare-styleable>
 
-    <declare-styleable name="PaymentOptionView">
-        <attr name="text" />
-        <attr name="amountValue" format="string"/>
-        <attr name="isSelected" format="boolean"/>
-    </declare-styleable>
 </resources>

@@ -17,19 +17,20 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.digimitra.whatsapppost.Sender;
 import com.smartbizz.Util.Constants;
 import com.smartbizz.Util.DialogUtil;
 import com.smartbizz.Util.PermissionUtil;
 import com.smartbizz.Util.PreferenceManager;
 import com.smartbizz.newUI.network.ApiConstants;
 import com.smartbizz.newUI.newViews.BrandDesigningActivity;
+import com.smartbizz.newUI.newViews.CatalogActivity;
+import com.smartbizz.newUI.newViews.CatalogueActivity;
 import com.smartbizz.newUI.newViews.DashboardActivity;
 import com.smartbizz.newUI.newViews.DesignActivity;
 import com.smartbizz.newUI.newViews.EditProfile;
-import com.smartbizz.newUI.newViews.PostCardActivity;
 import com.smartbizz.newUI.newViews.PostCardTabActivity;
 import com.smartbizz.newUI.newViews.SMSTabActivity;
+import com.smartbizz.newUI.newViews.SmsTemplateActivity;
 import com.smartbizz.newUI.view.NachInfoBottomSheet;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -48,6 +49,7 @@ import com.smartbizz.MainActivity;
 import com.smartbizz.newUI.MainApplication;
 import com.smartbizz.R;
 import com.smartbizz.newUI.SharedPref;
+//import com.whatsboinamob.smartbizz.Sender;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -102,18 +104,6 @@ public class DashboardFragmentNew extends BaseFragment {
             }
 
             MainActivity.auth_token = auth_token;
-//            MainApplication.lead_id = lead_id;
-//            MainActivity.lead_id = lead_id;
-
-//            try {
-//                SharedPreferences sharedPreferences = context.getSharedPreferences("UserData", Context.MODE_PRIVATE);
-//                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                editor.putString("lead_id", "");
-//                editor.apply();
-//                editor.commit();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
 
             linPromotion = view.findViewById(R.id.linPromotion);
             linSMS = view.findViewById(R.id.linSMS);
@@ -132,42 +122,48 @@ public class DashboardFragmentNew extends BaseFragment {
 
         }
 
-//        new AsyncTaskLoadLogo().execute();
-
         return view;
     }//-----------------------------------END OF ON CREATE----------------------------------------//
 
 
     View.OnClickListener PromotionClkListnr = v -> {
-        if(askRequiredPermissions()) {
+        if (askRequiredPermissions()) {
             startActivity(new Intent(getActivity(), PostCardTabActivity.class));
         }
     };
 
     View.OnClickListener SmsClkListnr = v -> {
-        if(askRequiredPermissions()) {
+        if (askRequiredPermissions()) {
             startActivity(new Intent(activity, SMSTabActivity.class));
         }
+//        callNachIno();
     };
 
     View.OnClickListener SenderClkListnr = v -> {
-            callNachIno();
+        if (askRequiredPermissions()) {
+            startActivity(new Intent(activity, SmsTemplateActivity.class));
+        }
+
     };
 
     View.OnClickListener designerClkListnr = v -> {
-            callNachIno();
+        callNachIno();
     };
 
     View.OnClickListener videoClkListnr = v -> {
-            callNachIno();
+        callNachIno();
     };
 
     View.OnClickListener catalogClkListnr = v -> {
-            callNachIno();
+
+        if (askRequiredPermissions()) {
+            startActivity(new Intent(activity, CatalogueActivity.class));
+        }
+//        callNachIno();
     };
 
     protected boolean askRequiredPermissions() {
-        boolean isAllPermissionsGranted =true;
+        boolean isAllPermissionsGranted = true;
         if (ActivityCompat.checkSelfPermission(getContext(),
                 android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(getContext(),
@@ -210,7 +206,7 @@ public class DashboardFragmentNew extends BaseFragment {
             } else {
                 //Handle success case
 //                startActivity(new Intent(getActivity(), PostCardActivity.class));
-                startActivity(new Intent(getActivity(), PostCardTabActivity.class));
+//                startActivity(new Intent(getActivity(), PostCardTabActivity.class));
             }
         }
     }
@@ -229,10 +225,10 @@ public class DashboardFragmentNew extends BaseFragment {
 
         onResume();
 
-        String brandName =  PreferenceManager.getString(context, Constants.PrefKeys.BRANDNAME);
-        String logo =  PreferenceManager.getString(context, Constants.PrefKeys.LOGO);
+        String brandName = PreferenceManager.getString(context, Constants.PrefKeys.BRANDNAME);
+        String logo = PreferenceManager.getString(context, Constants.PrefKeys.LOGO);
 
-        if(brandName.equalsIgnoreCase("null") || logo.equalsIgnoreCase("null") || brandName.equalsIgnoreCase("") || logo.equalsIgnoreCase("")){
+        if (brandName.equalsIgnoreCase("null") || logo.equalsIgnoreCase("null") || brandName.equalsIgnoreCase("") || logo.equalsIgnoreCase("")) {
             startActivity(new Intent(activity, EditProfile.class));
         }
     }

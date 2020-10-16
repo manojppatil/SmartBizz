@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <com.smartbizz.newUI.view.SmartBizzTextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,12 +13,12 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
         android:text="Smart Biz"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/sourcesanspro_semibolditalic"
         android:layout_marginTop="10dp"
         android:textSize="30sp"
         android:textAllCaps="true">
 
-    </TextView>
+    </com.smartbizz.newUI.view.SmartBizzTextView>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -30,13 +30,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/ivSplash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/smartbiz_original" />
+
             <LinearLayout
                 android:id="@+id/linPromotion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="60dp"
-                android:layout_alignParentTop="true"
+                android:layout_below="@+id/ivSplash"
                 android:layout_alignParentLeft="true">
 
                 <ImageView
@@ -97,6 +106,7 @@
                 android:layout_below="@+id/linSMS"
                 android:layout_marginTop="60dp"
                 android:layout_marginLeft="60dp"
+                android:visibility="gone"
                 android:layout_alignParentLeft="true">
 
                 <ImageView
@@ -124,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginRight="60dp"
-                android:layout_alignParentTop="true"
+                android:layout_below="@+id/ivSplash"
                 android:layout_alignParentRight="true">
 
                 <ImageView
@@ -185,6 +195,7 @@
                 android:orientation="vertical"
                 android:layout_marginTop="60dp"
                 android:layout_marginRight="60dp"
+                android:visibility="gone"
                 android:layout_alignParentRight="true">
 
                 <ImageView
@@ -205,6 +216,7 @@
                 android:layout_marginRight="46dp"
                 android:layout_marginTop="5dp"
                 android:text="video designer"
+                android:visibility="gone"
                 android:fontFamily="@font/poppins_bold"
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="true">

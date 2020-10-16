@@ -300,8 +300,7 @@
                     android:scaleType="centerCrop"
                     android:id="@+id/imageView_officelocation"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/image_location" />
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 

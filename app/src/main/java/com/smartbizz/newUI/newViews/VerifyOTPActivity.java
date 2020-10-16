@@ -115,10 +115,6 @@ public class VerifyOTPActivity extends BaseActivity implements View.OnClickListe
                 JSONObject jsonObject = response.getResponse();
                 if (jsonObject == null)
                     return;
-//                JSONObject authToken = jsonObject.optJSONObject("auth_token");
-//                if (authToken == null)
-//                    return;
-//                PreferenceManager.saveString(activity, Constants.PrefKeys.AUTH_TOKEN, authToken.optString(ApiConstants.Keys.AUTH_TOKEN));
                 try {
                     JSONObject result = jsonObject.optJSONObject("result");
                     try {
@@ -126,11 +122,6 @@ public class VerifyOTPActivity extends BaseActivity implements View.OnClickListe
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-//                    try {
-//                        PreferenceManager.saveString(activity, Constants.PrefKeys.MOBILE,result.optString(ApiConstants.Keys.MOBILE));
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
                     try {
                         PreferenceManager.saveString(activity, Constants.PrefKeys.EMAIL, result.optString(ApiConstants.Keys.EMAIL));
                     } catch (Exception e) {

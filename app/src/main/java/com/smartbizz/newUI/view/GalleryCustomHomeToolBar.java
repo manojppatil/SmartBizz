@@ -39,10 +39,10 @@ public class GalleryCustomHomeToolBar extends LinearLayout implements View.OnCli
         if (attrs != null) {
             mContext = context;
             boolean hideSupport = false;
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.EduvanzCustomToolBar, 0, 0);
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SmartBizzCustomToolBar, 0, 0);
 
-            if (a.hasValue(R.styleable.EduvanzCustomToolBar_hideContactUs)) {
-                hideSupport = a.getBoolean(R.styleable.EduvanzCustomToolBar_hideContactUs, false);
+            if (a.hasValue(R.styleable.SmartBizzCustomToolBar_hideContactUs)) {
+                hideSupport = a.getBoolean(R.styleable.SmartBizzCustomToolBar_hideContactUs, false);
             }
 
             a.recycle();

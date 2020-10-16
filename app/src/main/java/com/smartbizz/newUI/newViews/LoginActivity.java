@@ -57,18 +57,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         findViewById(R.id.tvLoginViaEmail).setOnClickListener(this);
     }
 
-    private void openSettings() {
-        Intent intent = new Intent();
-        intent.setAction(
-                Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        Uri uri = Uri.fromParts("package",
-                BuildConfig.APPLICATION_ID, null);
-        intent.setData(uri);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -115,11 +103,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 makeGetOtpRequest(mobileNumber, email, name);
             }
         }
-//        else if (v.getId() == R.id.tvLoginViaEmail) {
-//            Intent intent = new Intent(activity, EmailLoginActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
     }
 
     private void makeGetOtpRequest(String mobile, String email, String name) {

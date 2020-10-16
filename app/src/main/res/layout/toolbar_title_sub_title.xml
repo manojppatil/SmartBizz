@@ -10,7 +10,7 @@
         android:background="@color/colorTheme"
         android:paddingLeft="15dp">
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvPrimaryText"
             style="@style/StyleCardTitle"
             android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
             android:text="@string/my_applications"
             android:textColor="@color/colorWhite" />
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvSecondaryText"
             style="@style/StyleCardSubTitle"
             android:layout_width="wrap_content"

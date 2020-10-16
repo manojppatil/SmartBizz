@@ -15,7 +15,7 @@
         android:paddingStart="35dp"
         android:paddingEnd="30dp">
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvTitle"
             style="@style/StyleCommonTitle"
             android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
             android:text="@string/verify_details" />
 
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvSubTitle"
             style="@style/StyleCommonSubTitle"
             android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
             android:layout_below="@+id/tvTitle"
             android:text="@string/otp_sent_to" />
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvEdit"
             style="@style/StyleCommonSubTitle"
             android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
         android:paddingRight="30dp"
         android:paddingBottom="15dp">
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvVerifyOTP"
             style="@style/StyleCommonLabel"
             android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
             android:gravity="right|end|center_vertical"
             android:orientation="horizontal">
 
-            <com.smartbizz.newUI.view.EduvanzTextView
+            <com.smartbizz.newUI.view.SmartBizzTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editTextPinEntry"
@@ -93,7 +93,7 @@
                 android:text="@string/did_not_receive_otp"
                 android:textSize="@dimen/default_text_size" />
 
-            <com.smartbizz.newUI.view.EduvanzTextView
+            <com.smartbizz.newUI.view.SmartBizzTextView
                 android:id="@+id/tvResend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                 android:textSize="@dimen/default_text_size" />
 
 
-            <com.smartbizz.newUI.view.EduvanzTextView
+            <com.smartbizz.newUI.view.SmartBizzTextView
                 android:id="@+id/tvTimer"
                 android:layout_width="45dp"
                 android:layout_height="45dp"

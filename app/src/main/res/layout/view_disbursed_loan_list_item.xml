@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.smartbizz.newUI.view.EduvanzTextView
+                    <com.smartbizz.newUI.view.SmartBizzTextView
                         android:id="@+id/tvEmployerType"
                         style="@style/StyleCommonLabel"
                         android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
             android:background="@drawable/accent_border_selector_bottom_radius"
             android:orientation="horizontal">
 
-            <com.smartbizz.newUI.view.EduvanzButton
+            <com.smartbizz.newUI.view.SmartBizzButton
                 android:id="@+id/btnEdit"
                 style="@style/StyleBaseButton"
                 android:layout_width="0dp"
@@ -72,7 +72,7 @@
                 android:visibility="gone"
                 android:textColor="@color/colorAccent" />
 
-            <com.smartbizz.newUI.view.EduvanzButton
+            <com.smartbizz.newUI.view.SmartBizzButton
                 android:id="@+id/btnContinue"
                 style="@style/commonButtonAccentBG"
                 android:layout_width="0dp"

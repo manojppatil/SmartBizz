@@ -156,7 +156,7 @@ public class PostCardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         void bindData(Requests mBeats, int position) {
             Uri uri = Uri.parse(ApiConstants.BASE_URL + "/" + mBeats.getImgPath());
             photoView.setTag(mBeats.getHexCode());
-            if(mBeats.getImgPath().length() >1) {
+            if (mBeats.getImgPath().length() > 1) {
                 new AsyncTaskLoadImage(photoView).execute(ApiConstants.BASE_URL + "/" + mBeats.getImgPath());
             }
             imgEdit.setTag(mBeats);
@@ -356,7 +356,9 @@ public class PostCardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 } else {
                     message = txtMessage.getText().toString().trim();
                 }
-                intent.putExtra(Intent.EXTRA_TEXT, message);
+                String shareMessage = "\n India ka #1 Busineess Promotion Network\n\n";
+                shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
+                intent.putExtra(Intent.EXTRA_TEXT, message + shareMessage);
                 intent.putExtra(Intent.EXTRA_STREAM, ((PostCardTabActivity) context).buildFileProviderUri(Uri.parse("file://" + new_file)));//Uri.parse("file://" + sharefile))
                 intent.setDataAndType(contentUri, context.getContentResolver().getType(contentUri));
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -487,15 +489,15 @@ public class PostCardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
 //                int xPos = (canvas.getWidth() / 2 - 270);//Sahara India 12
 //                int xPos = (canvas.getWidth() / 2 - 450);//Sahara India Mumbai 19
-                int ysize = (int)((PreferenceManager.getString(context, Constants.PrefKeys.BRANDNAME)).length() * 23.33);
+                int ysize = (int) ((PreferenceManager.getString(context, Constants.PrefKeys.BRANDNAME)).length() * 23.33);
                 int xPos = (canvas.getWidth() / 2 - ysize);//Sahara 6
                 int yPos = canvas.getHeight() - (canvas.getHeight() - 100);
 
-                if(!(PreferenceManager.getString(context, Constants.PrefKeys.BRANDNAME).equalsIgnoreCase("null"))){
+                if (!(PreferenceManager.getString(context, Constants.PrefKeys.BRANDNAME).equalsIgnoreCase("null"))) {
                     canvas.drawText((PreferenceManager.getString(context, Constants.PrefKeys.BRANDNAME)).toUpperCase(), xPos, yPos, paint);
                 }
 
-                if(bitmapLogo != null) {
+                if (bitmapLogo != null) {
                     canvas.drawBitmap(bitmapLogo, (bitmap.getWidth()) - 300, (bitmap.getHeight()) - 310, new Paint());
                 }
                 imageView.setImageBitmap(bitmap);//1080   720

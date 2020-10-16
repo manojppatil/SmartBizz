@@ -52,7 +52,6 @@ public class NetworkMultipartRequest extends BaseRequest {
         DataOutputStream dos = new DataOutputStream(bos);
 
         try {
-
             // populate data byte payload
             Map<String, DataPart> data = getByteData();
             if (data != null && data.size() > 0) {

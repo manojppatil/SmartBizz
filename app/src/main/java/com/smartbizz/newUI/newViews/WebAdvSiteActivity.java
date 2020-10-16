@@ -159,21 +159,8 @@ public class WebAdvSiteActivity extends BaseActivity {
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
                     //TODO change if you want to laod new url in application webview
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-                    String url1;
-//                    if(url.contains("vendor_id")) {
-//                         url1 = url.replace("?vendor_id=", "deals/");
-//                    }else{
-//                        url1 = url;
-//                    }
-                    browserIntent.setData(Uri.parse(url));//https://secure.workadvantage.in/api/v1/affiliate_link_track/?vendor_id=25884&channel_api=957f3ada-09d0-4de3-90e8-d36a519ac989&email=shantesh.nadkarni@eduvanz.com
+                    browserIntent.setData(Uri.parse(url));
                     startActivity(browserIntent);
-
-//https://secure.workadvantage.in/api/v1/affiliate_link_track/?vendor_id=25884
-//https://www.flipkart.com/?affid=sourabhad&affExtParam1=634537&affExtParam2=494340
-
-//                    Intent intent = new Intent(WebAdvSiteActivity.this, WebAdvDealSiteActivity.class);
-//                    intent.putExtra(Constants.Extras.URL, url);
-//                    startActivity(intent);
 
                     return true;
                 }

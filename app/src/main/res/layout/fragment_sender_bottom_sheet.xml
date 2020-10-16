@@ -10,7 +10,7 @@
 
     <include layout="@layout/view_bottom_sheet_top_indicator" />
 <!--//We will be launching soon this feature-->
-    <com.smartbizz.newUI.view.EduvanzTextView
+    <com.smartbizz.newUI.view.SmartBizzTextView
         android:id="@+id/txtTitle"
         style="@style/styleBottomSheetTitle"
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical">
 
-        <com.smartbizz.newUI.view.EduvanzTextView
+        <com.smartbizz.newUI.view.SmartBizzTextView
             android:id="@+id/tvRegisterSMSService"
             style="@style/StyleHomeScreenHeader"
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp">
 
-        <com.smartbizz.newUI.view.EduvanzButton
+        <com.smartbizz.newUI.view.SmartBizzButton
             android:id="@+id/btnRequest"
             style="@style/commonButtonAccentBG1"
             android:layout_width="200dp"

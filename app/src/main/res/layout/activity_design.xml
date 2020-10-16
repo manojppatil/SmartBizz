@@ -20,7 +20,7 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-<!--            <com.smartbizz.newUI.view.EduvanzToolBarTitleSubTitle-->
+<!--            <com.smartbizz.newUI.view.SmartBizzToolBarTitleSubTitle-->
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                app:primaryText="@string/my_loan_applications"-->
@@ -46,7 +46,7 @@
             android:paddingRight="@dimen/card_view_margin_padding_left_right"
             android:paddingBottom="15dp">
 
-            <com.smartbizz.newUI.view.EduvanzTextView
+            <com.smartbizz.newUI.view.SmartBizzTextView
                 android:id="@+id/tvDisbursal"
                 style="@style/StyleMyApplicationTab"
                 android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
                 android:background="@android:color/white"
                 android:visibility="gone"/>
 
-            <com.smartbizz.newUI.view.EduvanzTextView
+            <com.smartbizz.newUI.view.SmartBizzTextView
                 android:id="@+id/tvPending"
                 style="@style/StyleMyApplicationTab"
                 android:layout_width="wrap_content"

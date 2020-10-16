@@ -1,7 +1,6 @@
 <resources>
     <color name="new_red">#EE415E</color>
     <color name="colorSecondary">#0099cc</color>
-    <color name="black_new">#666666</color>
     <color name="grey">#8e8e8e</color>
     <color name="textcolordark">#666666</color>
 
@@ -15,14 +14,11 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="blue">#435692</color>
-    <color name="lightblue">#d2e4ec</color>
 
     <!--<color name="permissioncolor">#4196a0</color>-->
     <color name="colorRed">#ee415e</color>
 
-    <color name="darkblue">#454a62</color>
     <color name="red">#ee415e</color>
-    <color name="blue_900">#0D47A1</color>
 
     <color name="blue_color_picker">#0066FF</color>
     <color name="brown_color_picker">#AF593E</color>

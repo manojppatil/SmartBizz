@@ -1,20 +1,18 @@
 package com.smartbizz.newUI.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.smartbizz.newUI.fragments.DynamicPostCardFragment;
-import com.smartbizz.newUI.fragments.SMSBulkUploadCardFragment;
-import com.smartbizz.newUI.fragments.SMSSenderFragment;
+import com.smartbizz.newUI.fragments.CreateGroupFragment;
+import com.smartbizz.newUI.fragments.MSmsSenderFragment;
+import com.smartbizz.newUI.fragments.SMSReportFragment;
 import com.smartbizz.newUI.fragments.SMSSenderIDUpdateFragment;
-import com.smartbizz.newUI.pojo.Category;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.smartbizz.newUI.newViews.SMSBalanceActivity;
+import com.smartbizz.newUI.newViews.SMSReportActivity;
 
 public class SMSTabAdapter extends FragmentPagerAdapter {
 
@@ -32,14 +30,21 @@ public class SMSTabAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                SMSSenderFragment homeFragment = new SMSSenderFragment();
-                return homeFragment;
+                Bundle bundle = new Bundle();
+                bundle.putString("msg", "");
+                MSmsSenderFragment fragobj = new MSmsSenderFragment();
+                fragobj.setArguments(bundle);
+//                MSmsSenderFragment homeFragment = new MSmsSenderFragment();
+                return fragobj;
             case 1:
-                SMSBulkUploadCardFragment sportFragment = new SMSBulkUploadCardFragment();
-                return sportFragment;
+                CreateGroupFragment createGroupFragment = new CreateGroupFragment();
+                return createGroupFragment;
             case 2:
                 SMSSenderIDUpdateFragment smsSenderIDUpdateFragment = new SMSSenderIDUpdateFragment();
                 return smsSenderIDUpdateFragment;
+            case 3:
+                SMSReportFragment smsReportFragment = new SMSReportFragment();
+                return smsReportFragment;
             default:
                 return null;
         }

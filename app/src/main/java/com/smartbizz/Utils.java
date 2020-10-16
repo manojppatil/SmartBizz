@@ -6,7 +6,6 @@ package com.smartbizz;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-//import org.apache.http.conn.util.InetAddressUtils;
 
 public class Utils {
 
@@ -85,12 +84,7 @@ public class Utils {
             }
         } catch (Exception ex) { } // for now eat exceptions
         return "";
-        /*try {
-            // this is so Linux hack
-            return loadFileAsString("/sys/class/net/" +interfaceName + "/address").toUpperCase().trim();
-        } catch (IOException ex) {
-            return null;
-        }*/
+
     }
 
     /**
@@ -106,7 +100,6 @@ public class Utils {
                 for (InetAddress addr : addrs) {
                     if (!addr.isLoopbackAddress()) {
                         String sAddr = addr.getHostAddress();
-                        //boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);
                         boolean isIPv4 = sAddr.indexOf(':')<0;
 
                         if (useIPv4) {

@@ -135,7 +135,7 @@
 <!--                    android:paddingRight="@dimen/card_view_margin_padding_left_right"-->
 <!--                    android:paddingBottom="20dp">-->
 
-<!--                    <com.smartbizz.views.EduvanzFormHeader-->
+<!--                    <com.smartbizz.views.SmartBizzFormHeader-->
 <!--                        android:id="@+id/stepDocsKYC"-->
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->
@@ -145,7 +145,7 @@
 <!--                        app:isActive="true"-->
 <!--                        app:title="All" />-->
 
-<!--                    <com.smartbizz.views.EduvanzFormHeader-->
+<!--                    <com.smartbizz.views.SmartBizzFormHeader-->
 <!--                        android:id="@+id/stepDocsIncome"-->
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->
@@ -156,7 +156,7 @@
 <!--                        app:isActive="false"-->
 <!--                        app:title="selected 1" />-->
 
-<!--                    <com.smartbizz.views.EduvanzFormHeader-->
+<!--                    <com.smartbizz.views.SmartBizzFormHeader-->
 <!--                        android:id="@+id/stepDocsAddress"-->
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->
@@ -167,7 +167,7 @@
 <!--                        app:isActive="false"-->
 <!--                        app:title="selected 1" />-->
 
-<!--                    <com.smartbizz.views.EduvanzFormHeader-->
+<!--                    <com.smartbizz.views.SmartBizzFormHeader-->
 <!--                        android:id="@+id/stepDocsRelationship"-->
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->
@@ -178,7 +178,7 @@
 <!--                        app:isActive="false"-->
 <!--                        app:title="selected 1" />-->
 
-<!--                    <com.smartbizz.views.EduvanzFormHeader-->
+<!--                    <com.smartbizz.views.SmartBizzFormHeader-->
 <!--                        android:id="@+id/stepDocsBusiness"-->
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->
@@ -189,7 +189,7 @@
 <!--                        app:isActive="false"-->
 <!--                        app:title="selected 1" />-->
 
-<!--                    <com.smartbizz.views.EduvanzFormHeader-->
+<!--                    <com.smartbizz.views.SmartBizzFormHeader-->
 <!--                        android:id="@+id/stepDocsBanking"-->
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->

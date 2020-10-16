@@ -6,7 +6,7 @@
     android:background="@color/colorPrimary">
 
 
-    <com.smartbizz.newUI.view.EduvanzTextView
+    <com.smartbizz.newUI.view.SmartBizzTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

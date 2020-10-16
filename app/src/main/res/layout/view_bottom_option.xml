@@ -11,14 +11,14 @@
         android:background="@drawable/top_shadow_gradient" />
 
 
-    <com.smartbizz.newUI.view.EduvanzButton
+    <com.smartbizz.newUI.view.SmartBizzButton
         android:id="@+id/btnLeft"
         style="@style/StyleBottomButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skip" />
 
-    <com.smartbizz.newUI.view.EduvanzButton
+    <com.smartbizz.newUI.view.SmartBizzButton
         android:id="@+id/btnRight"
         style="@style/StyleBottomButton"
         android:layout_width="wrap_content"

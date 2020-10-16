@@ -70,9 +70,7 @@ public class ContactUs extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-    //                String geoUri = "http://maps.google.com/maps?q=loc:" + 19.1066177 + "," + 72.8526924 + " (" + "Eduvanz" + ")";
-    //                geo:0,0?q=my+street+address
-                    String map = "http://maps.google.co.in/maps?q=" + "Eduvanz";
+                    String map = "";
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(map));
                     context.startActivity(intent);
 
@@ -83,7 +81,7 @@ public class ContactUs extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse(getString(R.string.tel_0224523689)));
+                    intent.setData(Uri.parse(getString(R.string.tel)));
                     startActivity(intent);
                 }
             });
@@ -91,7 +89,7 @@ public class ContactUs extends AppCompatActivity {
             linearLayoutEmail.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    shareToGMail(new String[]{"support@eduvanz.com"}, "", "");
+                    shareToGMail(new String[]{"shreesamarthservices@gmail.com"}, "", "");
                 }
             });
         } catch (Exception e) {

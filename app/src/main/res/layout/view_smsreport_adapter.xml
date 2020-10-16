@@ -23,7 +23,7 @@
                 android:layout_gravity="top"
                 android:layout_weight="2">
 
-                <com.smartbizz.newUI.view.EduvanzTextView
+                <com.smartbizz.newUI.view.SmartBizzTextView
                     style="@style/StyleCommonTitle"
                     android:id="@+id/txtMobile"
                     android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
                 android:layout_gravity="top"
                 android:layout_weight="3">
 
-                <com.smartbizz.newUI.view.EduvanzTextView
+                <com.smartbizz.newUI.view.SmartBizzTextView
                     style="@style/StyleCommonTitle"
                     android:id="@+id/txtDescription"
                     android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
                 android:layout_gravity="top"
                 android:layout_weight="2">
 
-                <com.smartbizz.newUI.view.EduvanzTextView
+                <com.smartbizz.newUI.view.SmartBizzTextView
                     style="@style/StyleCommonTitle"
                     android:id="@+id/txtStatus"
                     android:layout_width="wrap_content"

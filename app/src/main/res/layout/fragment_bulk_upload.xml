@@ -15,7 +15,13 @@
         android:layout_marginTop="50dp"
         android:orientation="vertical">
 
-        <com.smartbizz.newUI.view.EduvanzEditText
+        <TextView
+            android:id="@+id/txtCharCount"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"/>
+
+        <com.smartbizz.newUI.view.SmartBizzEditText
             android:id="@+id/etMesage"
             style="@style/StyleCommonTextFieldLarge"
             android:layout_width="match_parent"
@@ -29,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
-            <com.smartbizz.newUI.view.EduvanzButton
+            <com.smartbizz.newUI.view.SmartBizzButton
                 android:id="@+id/btnFilePicker"
                 style="@style/commonButtonAccentBG1"
                 android:layout_width="match_parent"
@@ -44,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
-            <com.smartbizz.newUI.view.EduvanzButton
+            <com.smartbizz.newUI.view.SmartBizzButton
                 android:id="@+id/btnReset"
                 style="@style/commonButtonAccentBG2"
                 android:layout_width="0dp"
@@ -54,7 +60,7 @@
                 android:layout_marginRight="10dp"
                 android:text="Reset" />
 
-            <com.smartbizz.newUI.view.EduvanzButton
+            <com.smartbizz.newUI.view.SmartBizzButton
                 android:id="@+id/btnSubmit"
                 style="@style/commonButtonAccentBG1"
                 android:layout_width="0dp"

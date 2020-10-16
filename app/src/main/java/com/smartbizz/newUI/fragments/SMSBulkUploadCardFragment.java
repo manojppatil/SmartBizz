@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,7 @@ import com.smartbizz.Util.CommonUtil;
 import com.smartbizz.Util.Constants;
 import com.smartbizz.Util.DialogUtil;
 import com.smartbizz.Util.FileUtil;
+import com.smartbizz.Util.GenericTextWatcher;
 import com.smartbizz.Util.PreferenceManager;
 import com.smartbizz.Util.VerticalLineDecorator;
 import com.smartbizz.newUI.adapter.PostCardAdapter;
@@ -75,7 +77,7 @@ public class SMSBulkUploadCardFragment extends BaseFragment implements View.OnCl
     public String userChoosenTask;
 
     private EditText etMesage;
-    private TextView txtNoData;
+    private TextView txtNoData, txtCharCount;
     private Button btnFilePicker, btnSubmit, btnReset;
 
     @Nullable
@@ -87,11 +89,12 @@ public class SMSBulkUploadCardFragment extends BaseFragment implements View.OnCl
         btnFilePicker = view.findViewById(R.id.btnFilePicker);
         btnSubmit = view.findViewById(R.id.btnSubmit);
         btnReset = view.findViewById(R.id.btnReset);
+        txtCharCount = view.findViewById(R.id.txtCharCount);
 
         btnFilePicker.setOnClickListener(this);
         btnReset.setOnClickListener(this);
         btnSubmit.setOnClickListener(this);
-
+        RegisterListner();
         return view;
     }
 
@@ -103,6 +106,25 @@ public class SMSBulkUploadCardFragment extends BaseFragment implements View.OnCl
 //                .setCancelable(true)
 //                .setIcon(R.drawable.success)
 //                .show();
+
+    }
+
+    private void RegisterListner() {
+
+
+        TextWatcher pinCodeTextWatcher = new GenericTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                super.onTextChanged(s, start, before, count);
+                if (s.length() == 150) {
+                    makeToast("You have reached max character");
+                    CommonUtil.hideKeyboard(activity, etMesage);
+                }
+                txtCharCount.setText("Char count: " + s.length());
+            }
+        };
+
+        etMesage.addTextChangedListener(pinCodeTextWatcher);
 
     }
 

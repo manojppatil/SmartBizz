@@ -21,7 +21,7 @@
                 android:orientation="vertical"
                 android:padding="@dimen/card_view_padding">
 
-                <com.smartbizz.newUI.view.EduvanzTextView
+                <com.smartbizz.newUI.view.SmartBizzTextView
                     android:id="@+id/tvEmployerType"
                     style="@style/StyleCommonLabel"
                     android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
-                <com.smartbizz.newUI.view.EduvanzEditText
+                <com.smartbizz.newUI.view.SmartBizzEditText
                     android:id="@+id/etRemarks"
                     style="@style/StyleLargeTextField"
                     android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                     android:hint="Remarks..."
                     android:inputType="text" />
 
-                <com.smartbizz.newUI.view.EduvanzButton
+                <com.smartbizz.newUI.view.SmartBizzButton
                     android:id="@+id/btnSubmit"
                     style="@style/commonButtonAccentBG"
                     android:layout_width="match_parent"

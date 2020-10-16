@@ -1,44 +1,24 @@
 package com.smartbizz.newUI.newViews;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.util.Base64;
-import android.util.Log;
+
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.smartbizz.MainActivity;
 import com.smartbizz.R;
 import com.smartbizz.Util.Constants;
-import com.smartbizz.Util.Globle;
 import com.smartbizz.Util.PreferenceManager;
-import com.smartbizz.newUI.MainApplication;
 import com.smartbizz.newUI.SharedPref;
-import com.smartbizz.newUI.VolleyCall;
-
-import org.json.JSONObject;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class SplashScreen extends BaseActivity {

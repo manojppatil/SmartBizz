@@ -5,7 +5,7 @@
     android:background="@color/colorTheme"
     android:paddingLeft="15dp">
 
-    <com.smartbizz.newUI.view.EduvanzTextView
+    <com.smartbizz.newUI.view.SmartBizzTextView
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="45dp"

@@ -10,16 +10,6 @@
 
     </style>
 
-    <style name="TextViewLightStyle" parent="Theme.AppCompat.Light">
-        <item name="colorAccent">@android:color/white</item>
-        <item name="colorControlNormal">@color/colorPrimary</item>
-        <item name="colorControlActivated">@color/red</item>
-        <item name="colorControlHighlight">@color/textcolordark</item>
-        <item name="android:fontFamily">@font/sourcesanspro_light</item>
-        <item name="android:textSize">14sp</item>
-
-    </style>
-
     <style name="TextViewTitleStyle" parent="Theme.AppCompat.Light">
         <item name="colorAccent">@android:color/white</item>
         <item name="colorControlNormal">@color/colorPrimary</item>
@@ -36,16 +26,6 @@
         <item name="colorControlActivated">@color/red</item>
         <item name="colorControlHighlight">@color/textcolordark</item>
         <item name="android:fontFamily">@font/sourcesanspro_regular</item>
-        <item name="android:textSize">14sp</item>
-
-    </style>
-
-    <style name="TextViewTitle14BoldStyle" parent="Theme.AppCompat.Light">
-        <item name="colorAccent">@android:color/white</item>
-        <item name="colorControlNormal">@color/colorPrimary</item>
-        <item name="colorControlActivated">@color/red</item>
-        <item name="colorControlHighlight">@color/textcolordark</item>
-        <item name="android:fontFamily">@font/sourcesanspro_semibold</item>
         <item name="android:textSize">14sp</item>
 
     </style>

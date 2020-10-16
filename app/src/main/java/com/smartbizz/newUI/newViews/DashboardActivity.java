@@ -66,7 +66,6 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
     public static Context context;
     public static TextView textViewName, textView_mobileNo, textViewEmail;
     FrameLayout frameLayoutDashboard;
-//    SharedPref sharedPref;
     LinearLayout linearLayoutUserDetail, editProfile;
     static String student_id = "", appInstallationTimeStamp = "", userFirst = "", userLast = "", userEmail = "", userPic = "",
                   isDataSync = "false";
@@ -89,7 +88,6 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
             getSupportActionBar().setTitle("");
             context = getApplicationContext();
             toolbar.setBackgroundColor(Color.parseColor("#0ABAB5"));
-//            sharedPref = new SharedPref();
             mActivity = this;
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);//---HIDE STATUS BAR
 
@@ -220,10 +218,12 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
                 Intent intent = new Intent(context, PostCardTabActivity.class);
                 startActivity(intent);
             }
-        } else if (id == R.id.nav_designer) {
-            Intent intent = new Intent(context, DesignActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_whatsappGrp) {
+        }
+//        else if (id == R.id.nav_designer) {
+////            Intent intent = new Intent(context, DesignActivity.class);
+////            startActivity(intent);
+//        }
+        else if (id == R.id.nav_whatsappGrp) {
 
             Intent browserIntent = new Intent(Intent.ACTION_VIEW);
 //            String url = "https://chat.whatsapp.com/KBlcPlJb78cAonD6CeWZCx";
@@ -232,17 +232,18 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
             startActivity(browserIntent);
 
         }
-        else if (id == R.id.nav_balanceData) {
-            if(askRequiredPermissions()) {
-                Intent intent = new Intent(context, SMSBalanceActivity.class);
-                startActivity(intent);
-            }
-        } else if (id == R.id.nav_smsReport) {
-            if(askRequiredPermissions()) {
-                Intent intent = new Intent(context, SMSReportActivity.class);
-                startActivity(intent);
-            }
-        } else if (id == R.id.nav_myproject) {
+//        else if (id == R.id.nav_balanceData) {
+//            if(askRequiredPermissions()) {
+//                Intent intent = new Intent(context, SMSBalanceActivity.class);
+//                startActivity(intent);
+//            }
+//        } else if (id == R.id.nav_smsReport) {
+//            if(askRequiredPermissions()) {
+//                Intent intent = new Intent(context, SMSReportActivity.class);
+//                startActivity(intent);
+//            }
+//        }
+        else if (id == R.id.nav_myproject) {
             if(askRequiredPermissions()) {
                 Intent intent = new Intent(context, MyProjectActivity.class);
                 startActivity(intent);
