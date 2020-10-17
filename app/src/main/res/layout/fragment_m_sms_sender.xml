@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sms_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".newUI.fragments.MSmsSenderFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/StyleCommonTextFieldLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_2sdp">
+
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/etContacts"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/_100sdp"-->
+                <!--                    android:padding="@dimen/_3sdp" />-->
+
+                <com.smartbizz.newUI.view.SmartBizzEditText
+                    android:id="@+id/etContacts"
+                    style="@style/StyleCommonTextFieldLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:digits="0123456789+, "
+                    android:hint="Your Selected Contacts"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_btn_bg_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_2sdp">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerContactGrp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_btn_bg_color" />
+
+                    <TextView
+                        android:id="@+id/btnContactPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:drawableTint="@color/black"
+                        android:gravity="center_vertical"
+                        android:text="Select Contacts"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/ed_senderid"
+                    style="@style/StyleSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:digits="0123456789+, "
+                    android:hint="SENDER ID"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10" />
+
+                <TextView
+                    android:id="@+id/txtCharCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="textEnd" />
+
+                <LinearLayout
+                    style="@style/StyleCommonTextFieldLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <com.smartbizz.newUI.view.SmartBizzEditText
+                        android:id="@+id/etMesage"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:hint="Type / Paste your Message here."
+                        android:inputType="textMultiLine"
+                        android:maxLines="4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:tint="@color/black"
+                            app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+
+                        <TextView
+                            android:id="@+id/btnFilePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:text="Attach File"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:gravity="center_vertical"
+                            android:text="(Max file size 2 MB)" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_template"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:background="@drawable/temp_banner"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <Button
+                    android:id="@+id/schedule_later"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                    android:drawableTint="@color/white"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:text="Schedule Later"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_weight="1"
+                    android:background="@color/colorTheme"
+                    android:drawableLeft="@drawable/ic_baseline_send_24"
+                    android:drawableTint="@color/white"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:text="Send Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtNoData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:gravity="center_vertical"
+                android:text="Oops! No record found for selected category. Please change the category."
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>
